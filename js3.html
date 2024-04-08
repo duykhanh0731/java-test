@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="imageToToggle" src="img/bai3_before.gif" alt="Original Image" style="width: 300px; height: auto; display: block; margin: 20px;">
+    <button onclick="changeImage()">Đổi hình</button>
+    <button onclick="returnToOriginalImage()">Trở về hình cũ</button>
+
+    <script>
+        // Path to the original image
+        var originalImagePath = 'img/bai3_before.gif';
+        // Path to the new image
+        var newImagePath = 'img/bai3_after.gif';
+
+        function changeImage() {
+            // Change the src of the image to the new image path
+            document.getElementById("imageToToggle").src = newImagePath;
+        }
+
+        function returnToOriginalImage() {
+            // Change the src of the image back to the original image path
+            document.getElementById("imageToToggle").src = originalImagePath;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+<label for="cofactorA">Hệ số a:</label>
+<input type="number" id="cofactorA" step="any" placeholder="Nhập hệ số a" /><br><br>
+
+<label for="cofactorB">Hệ số b:</label>
+<input type="number" id="cofactorB" step="any" placeholder="Nhập hệ số b" /><br><br>
+
+<button onclick="solveEquation()">Tìm nghiệm</button><br><br>
+
+<script>
+function solveEquation() {
+    // Lấy hệ số a và b từ các trường đầu vào
+    var a = parseFloat(document.getElementById("cofactorA").value);
+    var b = parseFloat(document.getElementById("cofactorB").value);
+    
+    // Kiểm tra xem hệ số a có bằng 0 không (phương trình tuyến tính)
+    if (a === 0) {
+        if (b === 0) {
+            alert("Phương trình vô số nghiệm.");
+        } else {
+            alert("Phương trình vô nghiệm.");
+        }
+    } else {
+        // Tính nghiệm của phương trình tuyến tính
+        var root = -b / a;
+        alert("Nghiệm của phương trình là: " + root);
+    }
+}
+</script>
+</body>
+</html>

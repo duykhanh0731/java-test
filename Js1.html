@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Ẩn và hiện thẻ div bằng Javascript</h1>
+    <p> Sử dụng Javascript để thay đổi thuộc tính display:none để ẩn và display:block để hiển thị thẻ div</p>
+    <div id="toggleElement" style="margin: 20px; padding: 10px; border: 1px solid black ;">
+        Nội dung thẻ div: Chào mừng bạn đến đến với webiste học lập trình JS
+    </div>
+    <button onclick="hideElement()">Ẩn</button>
+    <button onclick="showElement()">Hiển Thị</button>
+
+    <script>
+        function hideElement() {
+            // Hide the div element
+            document.getElementById("toggleElement").style.display = "none";
+        }
+
+        function showElement() {
+            // Show the div element
+            document.getElementById("toggleElement").style.display = "block";
+        }
+    </script>
+</body>
+</html>
