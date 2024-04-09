@@ -8,24 +8,26 @@
 <body>
     <input type="text" id="textInput" placeholder="Enter text here" />
     <button onclick="addToList()">Add</button>
-    <ul id="textList"></ul>
+    <p id="textList"></p>
 
     <script>
         function addToList() {
             var text = document.getElementById("textInput").value;
 
             if (text.trim() !== "") {
-                var li = document.createElement("li");
-                li.textContent = text;
-                li.style.backgroundColor = "red";
+                var p = document.createElement("p");
+                p.textContent = text;
+                p.style.backgroundColor = "red";
                 // Add margin to the bottom of each list item for spacing
-                li.style.marginBottom = "10px";
+                p.style.marginBottom = "20px";
+                p.style.color="white"
+                p.style.fontSize="20px"
 
                 var list = document.getElementById("textList");
                 if (list.childNodes.length > 0) {
-                    list.insertBefore(li, list.childNodes[0]);
+                    list.insertBefore(p, list.childNodes[0]);
                 } else {
-                    list.appendChild(li);
+                    list.appendChild(p);
                 }
 
                 document.getElementById("textInput").value = "";
